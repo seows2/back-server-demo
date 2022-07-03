@@ -11,4 +11,5 @@ export default TypeOrmModule.forRoot({
   password,
   database,
   synchronize: true,
+  autoLoadEntities: true,
 });

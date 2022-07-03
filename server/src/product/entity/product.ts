@@ -29,7 +29,7 @@ export class Product {
 
   @CreateDateColumn({
     type: 'timestamp',
-    name: 'updated_at',
+    name: 'created_at',
     default: () => 'CURRENT_TIMESTAMP(6)',
   })
   createdAt: Date;

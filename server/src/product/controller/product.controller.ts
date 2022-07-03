@@ -3,7 +3,7 @@ import { ProductFindQuery } from '../dto/product-find-query';
 import { ProductUploadRequest } from '../dto/product-upload-request';
 import { ProductService } from '../service/product.service';
 
-@Controller('product')
+@Controller('/products')
 export class ProductController {
   constructor(private readonly productService: ProductService) {}
 
