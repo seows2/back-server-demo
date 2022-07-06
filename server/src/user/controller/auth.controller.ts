@@ -4,7 +4,7 @@ import { SigninRequest } from '../dto/signin-request';
 import { AuthService } from '../service/auth.service';
 
 @Controller('/auth')
-export class UserController {
+export class AuthController {
   constructor(private readonly authService: AuthService) {}
 
   @Post()
