@@ -2,8 +2,9 @@ import * as dotenv from 'dotenv';
 dotenv.config();
 
 export default {
+  client: process.env.CLIENT || 'http://localhost:3000',
   server: {
-    port: 8080,
+    port: process.env.SERVER_PORT || 8080,
   },
   auth: {
     secret: process.env.JWT_SECRET || '',

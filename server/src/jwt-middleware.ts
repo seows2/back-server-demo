@@ -13,8 +13,8 @@ export class JwtMiddleware implements NestMiddleware {
         const result = this.jwtService.verify(token)['userId'];
         if (!result) throw Error('token expired');
         req.body.userId = this.jwtService.decode(token)['userId'];
-        next();
       }
+      next();
     } catch (error) {
       res.clearCookie(properties.auth.tokenKey);
       res.status(HttpStatus.PRECONDITION_FAILED);
