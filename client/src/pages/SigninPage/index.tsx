@@ -2,11 +2,10 @@ import { auth } from "../../apis/authApi";
 import useSigninForm, { SIGNIN_FORM_NAME } from "../../hooks/useSigninForm";
 
 const SigninPage = () => {
-  const { form, isEmpty, handleChanges } = useSigninForm();
-  console.log(form, isEmpty);
+  const { form, handleChanges } = useSigninForm();
 
-  const handleSignIn = () => {
-    const response = auth.login(form);
+  const handleSignIn = async () => {
+    const response = await auth.login(form);
     console.log(response);
   };
   return (
