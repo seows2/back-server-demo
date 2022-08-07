@@ -12,8 +12,11 @@ export class AuthController {
     @Body() signinRequest: SigninRequest,
     @Res({ passthrough: true }) signinResponse: Response,
   ) {
-    await this.authService.signIn(signinRequest, signinResponse);
-    return '로그인';
+    const message = await this.authService.signIn(
+      signinRequest,
+      signinResponse,
+    );
+    return { message };
   }
 
   @Delete()

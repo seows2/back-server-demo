@@ -1,9 +1,17 @@
-import { HttpStatus, NestMiddleware, Next, Req, Res } from '@nestjs/common';
+import {
+  HttpStatus,
+  Injectable,
+  NestMiddleware,
+  Next,
+  Req,
+  Res,
+} from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { NextFunction, Request, Response } from 'express';
 import messages from './config/messages';
 import properties from './config/properties';
 
+@Injectable()
 export class JwtMiddleware implements NestMiddleware {
   constructor(private readonly jwtService: JwtService) {}
   use(@Req() req: Request, @Res() res: Response, @Next() next: NextFunction) {
@@ -16,6 +24,8 @@ export class JwtMiddleware implements NestMiddleware {
       }
       next();
     } catch (error) {
+      console.log(error);
+
       res.clearCookie(properties.auth.tokenKey);
       res.status(HttpStatus.PRECONDITION_FAILED);
       res.send(messages.failed.EXPIRED_TOKEN);
