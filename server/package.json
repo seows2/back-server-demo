@@ -4,10 +4,8 @@
   "description": "login server",
   "main": "src/app.ts",
   "scripts": {
-    "lint": "eslint ./src --ext .ts",
-    "lint:fix": "eslint ./src --ext .ts --fix",
-    "dev": "env-cmd -f .env.dev nodemon --exec ts-node src/app.ts",
-    "start": "env-cmd ts-node src/app.ts"
+    "dev": "env-cmd -f .env.dev nodemon --exec ts-node -r tsconfig-paths/register ./src/bin/www.ts --watch ./src -e ts",
+    "start": "env-cmd ts-node -r tsconfig-paths/register ./src/bin/www.ts"
   },
   "repository": {
     "type": "git",
@@ -34,12 +32,14 @@
     "eslint": "^8.21.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.2.1",
     "nodemon": "^2.0.19",
     "prettier": "^2.7.1",
     "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.1.0",
     "typescript": "^4.7.4"
   }
 }
