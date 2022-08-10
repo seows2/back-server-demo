@@ -5,7 +5,7 @@
   "main": "src/app.ts",
   "scripts": {
     "dev": "env-cmd -f .env.dev nodemon --exec ts-node -r tsconfig-paths/register ./src/bin/www.ts --watch ./src -e ts",
-    "start": "env-cmd ts-node -r tsconfig-paths/register ./src/bin/www.ts"
+    "start": "NODE_ENV=production env-cmd ts-node -r tsconfig-paths/register ./src/bin/www.ts"
   },
   "repository": {
     "type": "git",
