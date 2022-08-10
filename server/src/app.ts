@@ -1,10 +1,10 @@
 import express from 'express';
 import loadApp from './loaders';
 
-const createApp = () => {
+const createApp = async () => {
   const app = express();
 
-  loadApp(app);
+  await loadApp(app);
 
   return app;
 };
