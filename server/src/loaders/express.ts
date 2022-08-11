@@ -6,9 +6,11 @@ import routes from '@/api';
 import ErrorResponse from '@/util/errorResponse';
 import errorHandler from '@/api/middlewares/error';
 import { ERROR } from '@/constants/error';
+import cookieParser from 'cookie-parser';
 
 export default (app: Express) => {
   app.use(express.json());
+  app.use(cookieParser());
   app.use(express.urlencoded({ extended: false }));
   app.use(cors());
   app.use(morgan(process.env.NODE_ENV === 'development' ? 'dev' : 'combined'));
