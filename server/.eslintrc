@@ -19,6 +19,7 @@
     "import/prefer-default-export": "off",
     "import/extensions": "off"
   },
+  "ignorePatterns": ["node_modules/", "build", "**/*.js"],
   "settings": {
     "import/resolver": {
       "alias": {
