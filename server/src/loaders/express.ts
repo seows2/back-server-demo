@@ -5,7 +5,7 @@ import config from '@/config';
 import routes from '@/api';
 import ErrorResponse from '@/util/errorResponse';
 import errorHandler from '@/api/middlewares/error';
-import * as error from '@/constants/error';
+import { ERROR } from '@/constants/error';
 
 export default (app: Express) => {
   app.use(express.json());
@@ -16,7 +16,7 @@ export default (app: Express) => {
   app.use(config.api.prefix, routes());
 
   app.all('*', (_req, _res, next) => {
-    next(new ErrorResponse(error.ERROR_NOT_FOUND));
+    next(new ErrorResponse(ERROR.NOT_FOUND));
   });
   app.use(errorHandler);
 

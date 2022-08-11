@@ -1,9 +1,14 @@
-export const ERROR_NOT_FOUND = {
-  statusCode: 404,
-  message: 'Not Found',
-};
-
-export const ERROR_UNKNOWN = {
-  statusCode: 500,
-  message: 'Unkown Error',
+export const ERROR = {
+  NOT_FOUND: {
+    statusCode: 404,
+    message: 'Not Found',
+  },
+  INTERNAL_SERVER_ERROR: {
+    statusCode: 500,
+    message: 'Internal Server Error',
+  },
+  UNAUTHORIZED: {
+    statusCode: 401,
+    message: 'Unauthorized',
+  },
 };
