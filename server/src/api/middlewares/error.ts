@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import ErrorResponse from '@/util/errorResponse';
+import ErrorResponse from '@/utils/errorResponse';
 
 const createErrorInfoDevelopment = (err: ErrorResponse) => {
   return {

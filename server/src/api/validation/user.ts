@@ -1,4 +1,4 @@
-import ErrorResponse from '@/util/errorResponse';
+import ErrorResponse from '@/utils/errorResponse';
 import { NextFunction, Request, Response } from 'express';
 import Joi from 'joi';
 

@@ -3,7 +3,7 @@ import morgan from 'morgan';
 import cors from 'cors';
 import config from '@/config';
 import routes from '@/api';
-import ErrorResponse from '@/util/errorResponse';
+import ErrorResponse from '@/utils/errorResponse';
 import errorHandler from '@/api/middlewares/error';
 import { ERROR } from '@/constants/error';
 import cookieParser from 'cookie-parser';
