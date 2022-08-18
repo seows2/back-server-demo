@@ -1,4 +1,4 @@
-import { getJwtAlgorithm } from '../../utils/jwt';
+import { getJwtAlgorithm } from '@/utils/jwt';
 import { Algorithm } from 'jsonwebtoken';
 
 describe('jwt utils 테스트', () => {

@@ -1,5 +1,5 @@
 import bcrypt from 'bcrypt';
-import * as hashHelper from '../../utils/hash';
+import * as hashHelper from '@/utils/hash';
 
 describe('hash utils 테스트', () => {
   describe('generateHash() 함수 테스트', () => {

@@ -1,4 +1,7 @@
 module.exports = {
+  moduleNameMapper: {
+    '^@/(.*)$': ['<rootDir>/src/$1'],
+  },
   moduleFileExtensions: ['ts', 'js', 'json'],
   testEnvironment: 'node',
   testMatch: ['**/?(*.)+(spec|test).(ts|js)'],
