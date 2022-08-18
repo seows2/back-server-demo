@@ -11,4 +11,8 @@ export const ERROR = {
     statusCode: 401,
     message: 'Unauthorized',
   },
+  CONFLICT: {
+    statusCode: 409,
+    message: 'already exist',
+  },
 };
