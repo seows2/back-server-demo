@@ -1,5 +1,5 @@
 import client from '../client';
-import { AuthResponseBody, LoginRequestBody } from '../types';
+import { AuthResponseBody, LoginRequestBody } from '@/types';
 
 export const login = async (reqBody: LoginRequestBody) => {
   const apiUrl = '/api/auth/login';

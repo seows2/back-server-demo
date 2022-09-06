@@ -1,5 +1,5 @@
 import client from '../client';
-import { AuthResponseBody } from '../types';
+import { AuthResponseBody } from '@/types';
 
 export const refresh = async () => {
   const apiUrl = 'api/auth/refresh';
