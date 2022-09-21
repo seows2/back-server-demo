@@ -4,6 +4,7 @@ const theme = {
   colorSub: '#F0C630',
   colorBg: '#F4F7FF',
   colorWhite: '#FFFFFF',
+  mainWidth: '800px',
 };
 
 export default theme;

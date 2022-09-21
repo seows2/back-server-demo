@@ -1,4 +1,4 @@
-import Layout from '@/components/common/Layout';
+import Layout from '@/components/Common/Layout';
 
 const SignInPage = () => {
   return <Layout>로그인 페이지</Layout>;

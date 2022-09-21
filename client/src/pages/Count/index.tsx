@@ -1,5 +1,5 @@
 import { useCountValue, useSetCount } from '@/atoms/countState';
-import Layout from '@/components/common/Layout';
+import Layout from '@/components/Common/Layout';
 
 const CountPage = () => {
   const count = useCountValue();

@@ -1,4 +1,4 @@
-import Layout from '@/components/common/Layout';
+import Layout from '@/components/Common/Layout';
 
 const HomePage = () => {
   return <Layout>홈 페이지</Layout>;
