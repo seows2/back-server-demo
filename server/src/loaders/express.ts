@@ -12,7 +12,7 @@ export default (app: Express) => {
   app.use(express.json());
   app.use(cookieParser());
   app.use(express.urlencoded({ extended: false }));
-  app.use(cors());
+  app.use(cors(config.corsOptions));
   app.use(morgan(process.env.NODE_ENV === 'development' ? 'dev' : 'combined'));
 
   app.use(config.api.prefix, routes());

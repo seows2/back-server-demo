@@ -6,6 +6,11 @@ export default {
     prefix: '/api',
     version: process.env.API_VERSION || '0.0.0',
   },
+  corsOptions: {
+    origin: process.env.CLIENT_ORIGIN,
+    credentials: true,
+    optionsSuccessStatus: 200,
+  },
   database: {
     mysql: {
       host: process.env.MYSQL_HOST,
