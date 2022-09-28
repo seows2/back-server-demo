@@ -1,11 +1,11 @@
 import { HTTPResponse } from './type';
 
-interface HTTPErrorProps<ResponseBodyT = unknown> {
+interface HTTPErrorProps<ResponseBodyT> {
   message: string;
   response?: HTTPResponse<ResponseBodyT>;
 }
 
-class HTTPError<ResponseBodyT = unknown> extends Error {
+class HTTPError<ResponseBodyT> extends Error {
   response?: HTTPResponse<ResponseBodyT>;
 
   stacks?: string;

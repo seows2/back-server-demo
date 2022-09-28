@@ -1,9 +1,9 @@
-import * as authApi from '@/apis/auth';
 import { useUserState } from '@/atoms/userState';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { LoginRequestBody } from '@/types';
+import { authApi } from '@/apis';
 
 const useAuth = () => {
   const [user, setUserState] = useUserState();

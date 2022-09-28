@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import { useUserState } from '@/atoms/userState';
-import * as authApi from '@/apis/auth';
+import { authApi } from '@/apis';
 
 const useAutoLogin = () => {
   const [user, setUserState] = useUserState();

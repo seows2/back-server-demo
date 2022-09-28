@@ -6,38 +6,38 @@ abstract class HTTPClient {
 
   abstract getHeader(): AxiosRequestHeaders | undefined;
 
-  abstract request<ResponseBodyT = unknown, RequestBodyT = unknown>(
+  abstract request<ResponseBodyT, RequestBodyT>(
     config: HTTPRequestConfig<RequestBodyT>,
   ): Promise<HTTPResponse<ResponseBodyT>>;
 
-  async get<ResponseBodyT = unknown, RequestBodyT = unknown>(
+  async get<ResponseBodyT, RequestBodyT>(
     url: string,
     config?: HTTPRequestConfig<RequestBodyT>,
   ): Promise<HTTPResponse<ResponseBodyT>> {
-    return this.request({ ...config, url, method: 'GET' });
+    return this.request<ResponseBodyT, RequestBodyT>({ ...config, url, method: 'GET' });
   }
 
-  async delete<ResponseBodyT = unknown, RequestBodyT = unknown>(
+  async delete<ResponseBodyT, RequestBodyT>(
     url: string,
     config?: HTTPRequestConfig<RequestBodyT>,
   ): Promise<HTTPResponse<ResponseBodyT>> {
-    return this.request({ ...config, url, method: 'DELETE' });
+    return this.request<ResponseBodyT, RequestBodyT>({ ...config, url, method: 'DELETE' });
   }
 
-  async post<ResponseBodyT = unknown, RequestBodyT = unknown>(
+  async post<ResponseBodyT, RequestBodyT>(
     url: string,
     data: RequestBodyT,
     config?: HTTPRequestConfig<RequestBodyT>,
   ): Promise<HTTPResponse<ResponseBodyT>> {
-    return this.request({ ...config, url, data, method: 'POST' });
+    return this.request<ResponseBodyT, RequestBodyT>({ ...config, url, data, method: 'POST' });
   }
 
-  async put<ResponseBodyT = unknown, RequestBodyT = unknown>(
+  async put<ResponseBodyT, RequestBodyT>(
     url: string,
     data: RequestBodyT,
     config?: HTTPRequestConfig<RequestBodyT>,
   ): Promise<HTTPResponse<ResponseBodyT>> {
-    return this.request({ ...config, url, data, method: 'PUT' });
+    return this.request<ResponseBodyT, RequestBodyT>({ ...config, url, data, method: 'PUT' });
   }
 }
 

@@ -1,13 +1,13 @@
 import { AxiosRequestHeaders } from 'axios';
 
-export interface HTTPResponse<ResponseBodyT = unknown> {
+export interface HTTPResponse<ResponseBodyT> {
   data: ResponseBodyT;
   status: number;
 }
 
 export type HTTPMethod = 'GET' | 'DELETE' | 'POST' | 'PUT';
 
-export interface HTTPRequestConfig<RequestBodyT = unknown> {
+export interface HTTPRequestConfig<RequestBodyT> {
   url?: string;
   baseURL?: string;
   method?: HTTPMethod;

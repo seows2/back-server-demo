@@ -4,6 +4,7 @@ import HomePage from '@/pages/Home';
 import SignInPage from '@/pages/SignIn';
 import SignUpPage from '@/pages/SignUp';
 import useAutoLogin from './hooks/useAuthLogin';
+import Gnb from '@/components/Common/Gnb';
 
 const App = () => {
   const { isLoading } = useAutoLogin();
@@ -12,6 +13,7 @@ const App = () => {
 
   return (
     <>
+      <Gnb />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/count" element={<CountPage />} />

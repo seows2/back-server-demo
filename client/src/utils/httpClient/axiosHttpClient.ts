@@ -15,7 +15,7 @@ class AxiosHTTPClient extends HTTPClient {
     this.defaultRequestConfig = defaultConfig;
   }
 
-  async request<ResponseBodyT = unknown, RequestBodyT = unknown>(
+  async request<ResponseBodyT, RequestBodyT>(
     config: HTTPRequestConfig<RequestBodyT>,
   ): Promise<HTTPResponse<ResponseBodyT>> {
     try {
