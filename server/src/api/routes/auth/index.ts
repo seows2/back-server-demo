@@ -7,9 +7,9 @@ export default (router: Router) => {
   router.use('/auth', authRouter);
 
   // [TODO] Validator 추가
-  authRouter.get('/login', handleLogin);
-  authRouter.get('/refresh', handleRefresh);
-  authRouter.get('/logout', handleLogout);
+  authRouter.post('/', handleLogin);
+  authRouter.get('/', handleRefresh);
+  authRouter.delete('/', handleLogout);
 
   return router;
 };
