@@ -14,6 +14,9 @@ const Gnb: FC = () => {
         <Link to={'/signup'}>
           <S.SignUpButton type="button">Register</S.SignUpButton>
         </Link>
+        <Link to={'/booking'}>
+          <button type="button">예약</button>
+        </Link>
         <Link to={'/count'}>
           <button type="button">Count</button>
         </Link>

@@ -5,6 +5,7 @@ import SignInPage from '@/pages/SignIn';
 import SignUpPage from '@/pages/SignUp';
 import useAutoLogin from './hooks/useAuthLogin';
 import Gnb from '@/components/Common/Gnb';
+import BookingPage from './pages/Booking';
 
 const App = () => {
   const { isLoading } = useAutoLogin();
@@ -16,6 +17,7 @@ const App = () => {
       <Gnb />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/booking" element={<BookingPage />} />
         <Route path="/count" element={<CountPage />} />
         <Route path="/signin" element={<SignInPage />} />
         <Route path="/signup" element={<SignUpPage />} />
