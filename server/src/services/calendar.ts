@@ -5,7 +5,7 @@ import { ERROR } from '@/constants/error';
 
 @Service()
 class CalendarService {
-  async getHoliday(year: number, month: number) {
+  async getHoliday(year: string, month: string) {
     try {
       const { items } = await calendarHelper.getCalendarInfo(year, month);
 

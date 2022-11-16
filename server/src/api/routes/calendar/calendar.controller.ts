@@ -8,7 +8,7 @@ const handleGetHoliday = async (req: Request, res: Response, next: NextFunction)
 
     const calendarServiceInstance = Container.get(CalendarService);
 
-    const response = await calendarServiceInstance.getHoliday(Number(year), Number(month));
+    const response = await calendarServiceInstance.getHoliday(String(year), String(month));
 
     res.json(response);
   } catch (error) {
