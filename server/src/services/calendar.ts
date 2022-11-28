@@ -7,9 +7,9 @@ import { ERROR } from '@/constants/error';
 class CalendarService {
   async getHoliday(year: string, month: string) {
     try {
-      const { items } = await calendarHelper.getCalendarInfo(year, month);
+      const json = await calendarHelper.getCalendarInfo(year, month);
 
-      return items;
+      return json;
     } catch (error) {
       throw new ErrorResponse(ERROR.UNAUTHORIZED);
     }

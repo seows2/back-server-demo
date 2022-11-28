@@ -19,3 +19,9 @@ export interface RefreshCookie {
 export type LoginRequestBody = UserLoginInfo;
 export type CreateUserRequestBody = UserLoginInfo;
 export type RefreshRequestCookiesType = RefreshCookie;
+
+export type CalendarResBody = {
+  date: number;
+  dateName: string;
+  isHoliday: boolean;
+};
