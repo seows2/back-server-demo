@@ -40,7 +40,7 @@ const useAuth = () => {
     });
   };
 
-  return { user, login, logout, isLoading };
+  return { user, login, logout, isLoading, isLoggedIn: user !== null };
 };
 
 export default useAuth;
