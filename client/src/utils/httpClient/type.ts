@@ -13,4 +13,5 @@ export interface HTTPRequestConfig<RequestBodyT> {
   method?: HTTPMethod;
   data?: RequestBodyT;
   headers?: AxiosRequestHeaders;
+  params?: any;
 }
