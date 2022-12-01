@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { SERVICE_END_POINT, SERVICE_KEY } from '@/constants/calendar';
 import { CalendarResBody } from '@/types';
+import { loadCache, saveCache } from './cache';
 
 type ItemType = {
   dateKind: string;
@@ -33,6 +34,10 @@ export const getCalendarInfo = async (
   solYear: string,
   solMonth: string,
 ): Promise<CalendarResBody[]> => {
+  const key = `${solYear}${solMonth}`;
+  const calendarCache = loadCache<CalendarResBody[]>(key);
+  if (calendarCache) return calendarCache;
+
   const { data } = await axios.get(`${SERVICE_END_POINT}`, {
     params: {
       serviceKey: SERVICE_KEY,
@@ -41,5 +46,5 @@ export const getCalendarInfo = async (
     },
   });
 
-  return formatCalendar(data.response.body);
+  return saveCache<CalendarResBody[]>(key, formatCalendar(data.response.body));
 };
